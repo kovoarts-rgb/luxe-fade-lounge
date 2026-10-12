@@ -105,7 +105,7 @@ function initHero(){
     const lighting=document.createElement('canvas');lighting.width=1024;lighting.height=512;
     const studio=lighting.getContext('2d');
     const gradient=studio.createLinearGradient(0,0,0,512);
-    [[0,'#8c9cb3'],[.2,'#c5d0e0'],[.35,'#faffff'],[.43,'#11151e'],[.48,'#030509'],[.54,'#7f92aa'],[.59,'#faffff'],[.7,'#27323f'],[1,'#05070b']].forEach(([stop,color])=>gradient.addColorStop(stop,color));
+    [[0,'#8c9cb3'],[.2,'#c5d0e0'],[.35,'#faffff'],[.43,'#616d7b'],[.48,'#505d70'],[.54,'#7f92aa'],[.59,'#faffff'],[.7,'#27323f'],[1,'#05070b']].forEach(([stop,color])=>gradient.addColorStop(stop,color));
     studio.fillStyle=gradient;studio.fillRect(0,0,1024,512);
     for(const [x,width,alpha] of [[75,80,.7],[425,54,.95],[785,110,.6]]){
       const panel=studio.createLinearGradient(x,0,x+width,0);
