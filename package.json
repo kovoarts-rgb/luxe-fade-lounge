@@ -1,0 +1,12 @@
+{
+  "name": "luxe-fade-lounge",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:hero": "node scripts/hero/build-logo.mjs && node scripts/hero/build-runtime.mjs"
+  },
+  "devDependencies": {
+    "three": "0.186.1",
+    "esbuild": "0.25.12"
+  }
+}

@@ -1,0 +1,36 @@
+/* Chrome model and star field are confined to the first-screen experience. */
+.identity-hero.star-hero{min-height:780px;max-height:none;padding:116px 7% 86px;background:#030305;color:#eef1f6}
+.identity-hero.star-hero:after{background:radial-gradient(ellipse at 50% 32%,#20273424,transparent 62%);pointer-events:none}
+.starfield{position:absolute;inset:0;width:100%;height:100%;z-index:-2;pointer-events:none;background:radial-gradient(1px 1px at 13% 23%,#d6e0f7,transparent),radial-gradient(1px 1px at 78% 41%,#d6e0f7,transparent),radial-gradient(1px 1px at 34% 78%,#d6e0f7,transparent),radial-gradient(1px 1px at 83% 17%,#d6e0f7,transparent),radial-gradient(1px 1px at 24% 57%,#d6e0f7,transparent),radial-gradient(1px 1px at 92% 81%,#d6e0f7,transparent)}
+.hero-logo-stage{position:relative;width:clamp(340px,40vw,520px);max-width:100%;aspect-ratio:1.28;isolation:isolate}
+.hero-model-canvas{display:block;width:100%;height:100%;opacity:0;transition:opacity .6s ease;pointer-events:none}
+.hero-logo-fallback{position:absolute;left:6%;top:4%;width:88%;height:92%;object-fit:contain;filter:drop-shadow(0 3px 12px #b1c8ef22);transition:opacity .6s ease;pointer-events:none}
+.hero-logo-stage.is-ready .hero-model-canvas{opacity:1}
+.hero-logo-stage.is-ready .hero-logo-fallback{opacity:0}
+.star-hero .hero-introduction{margin-top:16px}
+.identity-hero.star-hero .hero-copy{color:#c0c6d0}
+.identity-hero.star-hero .hero-actions{margin-top:25px}
+.identity-hero.star-hero .hero-actions>.link{background:#111216bf;color:#edf0f6;border-color:#747d8a66;box-shadow:inset 0 1px 0 #ffffff14,0 3px 12px #0006}
+.identity-hero.star-hero .hero-actions>.link:hover{background:#20232a;border-color:#b1bacb}
+.identity-hero.star-hero .hero-signature,.identity-hero.star-hero .hero-signature a{color:#979fac}
+.star-hero .hero-signature>span{border-right-color:#ffffff2e}
+.hero-visible .header,.hero-visible .header.scrolled{background:#040508e6;border-bottom-color:#ffffff16;box-shadow:0 1px 0 #ffffff08}
+.hero-visible .header-location{color:#a2aab7;border-left-color:#ffffff26}
+.hero-visible .header-location>span:first-child{color:#b3bbc6}
+.hero-visible .desktop-nav>a{color:#b5bdc9}
+.hero-visible .desktop-nav>a:hover,.hero-visible .desktop-nav>a[aria-current]{color:#fff}
+.hero-visible .desktop-nav>a:after{background:#e5ecfa}
+.hero-visible .menu-toggle{background:none;color:#dbe1ec;box-shadow:none}
+.hero-visible .menu-toggle span{background:#dbe1ec}
+.hero-visible .mobile-book{background:#040508ed;border-top-color:#ffffff20;box-shadow:none}
+.hero-visible .mobile-book strong{color:#dce2eb}
+.hero-visible .mobile-book small{color:#909aa9}
+@media(max-width:760px){
+ .identity-hero.star-hero{min-height:760px;padding:110px 7% 120px;background:#030305}
+ .hero-logo-stage{width:min(350px,90vw);max-width:100%}
+ .star-hero .hero-introduction{margin-top:20px}
+ .identity-hero.star-hero .hero-copy{font-size:14px;line-height:1.9}
+ .identity-hero.star-hero .hero-signature{margin-top:24px}
+}
+@media(max-width:380px){.identity-hero.star-hero{min-height:770px;padding-top:116px;padding-bottom:122px}.hero-logo-stage{width:100%;max-width:300px}.star-hero .hero-introduction{margin-top:18px}}
+@media(prefers-reduced-motion:reduce){.hero-model-canvas,.hero-logo-fallback{transition:none}}
