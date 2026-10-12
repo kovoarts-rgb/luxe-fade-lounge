@@ -76,6 +76,6 @@ function updateHeader(){header.classList.toggle('scrolled',scrollY>40);queued=fa
 addEventListener('scroll',()=>{if(!queued){queued=true;requestAnimationFrame(updateHeader);}},{passive:true});updateHeader();
 if('IntersectionObserver' in window){
   const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){document.querySelectorAll('[data-nav]').forEach(link=>{if(link.dataset.nav===entry.target.id)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});}}},{rootMargin:'-20% 0px -55% 0px',threshold:0});
-  document.querySelectorAll('main>section[id]').forEach(section=>observer.observe(section));
+  document.querySelectorAll('main section[id]').forEach(section=>observer.observe(section));
 }
 document.querySelector('#year').textContent=new Date().getFullYear();

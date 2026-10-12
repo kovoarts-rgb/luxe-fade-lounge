@@ -14,7 +14,7 @@ The supplied brand logo, Anthony-at-work photo, signed case, and lounge photo re
 
 ## Chrome 3D hero
 
-The first screen uses a real beveled GLB model traced from the supplied logo, with 22 component meshes, polished chrome materials, a local reflection environment, and a black animated star field. `hero-3d.mjs` and `hero.css` control the presentation. `assets/luxe-fade-logo.glb` is the standalone model.
+The hero uses a real beveled GLB model traced from the supplied logo, with 22 component meshes, 73,604 vertices, refined curves, 16-segment bevels and mirror-polished chrome (metalness 1, roughness 0.055). A local HDR reflection environment produces moving highlights. A single sticky galaxy backdrop with 310 stars and 42 animated sparkle points continues through the signed case and vintage chair section. `hero-3d.mjs` and `hero.css` control the presentation. `logo-interaction.mjs` provides pointer-captured, quaternion-based free rotation, bounded two-finger pinch zoom, reset and keyboard controls. Touch dragging is confined to the logo; the rest of the page scrolls normally. `assets/luxe-fade-logo.glb` is the standalone model.
 
 Rendering pauses offscreen, in background tabs, and while dialogs are open. Reduced-motion preferences use a static scene. A chrome SVG fallback remains if WebGL or the model cannot load. Booking is independent of the decorative renderer.
 

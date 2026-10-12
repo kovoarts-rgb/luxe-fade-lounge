@@ -1,4 +1,4 @@
-/* Chrome model and star field are confined to the first-screen experience. */
+/* Chrome identity and continuous galaxy experience. */
 .identity-hero.star-hero{min-height:780px;max-height:none;padding:116px 7% 86px;background:#030305;color:#eef1f6}
 .identity-hero.star-hero:after{background:radial-gradient(ellipse at 50% 32%,#20273424,transparent 62%);pointer-events:none}
 .starfield{position:absolute;inset:0;width:100%;height:100%;z-index:-2;pointer-events:none;background:radial-gradient(1px 1px at 13% 23%,#d6e0f7,transparent),radial-gradient(1px 1px at 78% 41%,#d6e0f7,transparent),radial-gradient(1px 1px at 34% 78%,#d6e0f7,transparent),radial-gradient(1px 1px at 83% 17%,#d6e0f7,transparent),radial-gradient(1px 1px at 24% 57%,#d6e0f7,transparent),radial-gradient(1px 1px at 92% 81%,#d6e0f7,transparent)}
@@ -34,3 +34,42 @@
 }
 @media(max-width:380px){.identity-hero.star-hero{min-height:770px;padding-top:116px;padding-bottom:122px}.hero-logo-stage{width:100%;max-width:300px}.star-hero .hero-introduction{margin-top:18px}}
 @media(prefers-reduced-motion:reduce){.hero-model-canvas,.hero-logo-fallback{transition:none}}
+
+/* A single sky continues from the chrome identity to the signed kit and chair. */
+.galaxy-story{position:relative;isolation:isolate;background:#030407;color:#e8edf5}
+.galaxy-backdrop{position:sticky;top:0;height:100svh;margin-bottom:-100svh;z-index:-1;overflow:hidden;pointer-events:none;background:radial-gradient(ellipse at 18% 67%,#27356135,transparent 52%),radial-gradient(ellipse at 86% 24%,#4c315329,transparent 48%),#030407}
+.galaxy-backdrop .starfield{position:absolute;inset:0;width:100%;height:100%;z-index:auto}
+.galaxy-story .identity-hero.star-hero{background:transparent}
+.galaxy-story .identity-hero.star-hero:after{background:radial-gradient(ellipse at 50% 34%,#768fb50b,transparent 60%)}
+.hero-logo-stage{width:clamp(350px,44vw,580px);cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none;outline:none}
+.hero-logo-stage.is-dragging{cursor:grabbing}
+.hero-logo-stage:focus-visible:not(.pointer-focused){outline:1px solid #dce7fb8c;outline-offset:5px;border-radius:16px}
+.hero-model-canvas{pointer-events:auto}
+.logo-controls{display:flex;align-items:center;justify-content:center;gap:16px;min-height:25px;margin-top:2px;color:#a8b3c6;font-size:10px;letter-spacing:.07em}
+.logo-controls[hidden],.logo-reset[hidden]{display:none}
+.logo-reset{font:inherit;letter-spacing:inherit;background:none;border:0;border-left:1px solid #ffffff30;padding:7px 0 7px 16px;color:#d6deee;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.logo-reset:hover{color:#fff}
+.logo-reset:focus-visible{outline:1px solid #fff;outline-offset:3px}
+.galaxy-story .case-story{background:transparent;border-bottom:1px solid #c0d2e126;padding-top:70px}
+.galaxy-story .case-heading>p:last-child{color:#b7c1d2}
+.galaxy-story .case-object{background:linear-gradient(145deg,#1c2433ba,#0b101dbf);border-color:#b8cbe143;box-shadow:inset 0 1px 0 #dceafb27,0 24px 48px -23px #000;backdrop-filter:blur(8px)}
+.galaxy-story .case-object-top{color:#aab9ce}
+.galaxy-story .case-object-caption{color:#e1e8f4}
+.galaxy-story .case-photo{border-color:#8eabc84a}
+.galaxy-story .case-copy{background:linear-gradient(145deg,#1b2434c9,#0b101ac9);border-color:#bed3ec40;box-shadow:inset 0 1px 0 #ffffff20,0 18px 35px -22px #000;backdrop-filter:blur(8px)}
+.galaxy-story .case-copy>.eyebrow,.galaxy-story .case-materials small,.galaxy-story .anthony-profile .eyebrow{color:#b9cbe4}
+.galaxy-story .case-copy>p:not(.eyebrow),.galaxy-story .case-materials>span,.galaxy-story .anthony-profile div>p:last-child{color:#bac6d8}
+.galaxy-story .case-materials{border-top-color:#bed1e32b}
+.galaxy-story .case-copy>.link{color:#ecf1fa;background:linear-gradient(145deg,#3b485a,#17202f);border-color:#a6bad948;box-shadow:inset 0 1px 0 #ffffff26,0 3px 12px #0004}
+.galaxy-story .case-copy>.link:hover{border-color:#d6e5fa}
+.galaxy-story .anthony-profile h3{color:#eff3f9}
+.galaxy-story .anthony-profile>img{border-color:#c6d4e473}
+.galaxy-story .anthony-work-photo{border-color:#c6d4e42b}
+@media(max-width:760px){.hero-logo-stage{width:min(370px,96vw);max-width:100%}.galaxy-story .case-story{padding-top:47px}.star-hero .hero-introduction{margin-top:13px}.logo-controls{font-size:10px;margin-top:5px}.identity-hero.star-hero{min-height:790px;padding-top:108px}}
+@media(max-width:380px){.hero-logo-stage{width:100%;max-width:320px}.identity-hero.star-hero{min-height:770px;padding-top:116px}.logo-controls{margin-top:4px}}
+
+.galaxy-story .identity-hero.star-hero{height:auto;min-height:860px}
+@media(max-width:760px){.galaxy-story .identity-hero.star-hero{min-height:790px}}
+
+.star-hero .hero-introduction:before{content:"";position:absolute;inset:-15px -18px;z-index:-1;pointer-events:none;background:radial-gradient(ellipse,#030407d4 15%,#03040750 60%,transparent 78%)}
+.hero-logo-stage[data-render-mode="fallback"]{cursor:default;touch-action:pan-y}

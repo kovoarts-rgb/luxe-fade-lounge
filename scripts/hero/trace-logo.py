@@ -7,7 +7,7 @@ root = Path(__file__).resolve().parents[2]
 svg = (root/'assets/logo.svg').read_text()
 raw = base64.b64decode(re.search(r'data:image/jpeg;base64,([^"\s]+)', svg).group(1))
 image = Image.open(io.BytesIO(raw)).convert('L').crop((145,443,445,685))
-image = image.resize((900,726),Image.Resampling.LANCZOS).filter(ImageFilter.GaussianBlur(.5))
+image = image.resize((900,726),Image.Resampling.LANCZOS).filter(ImageFilter.GaussianBlur(1.2))
 mask = np.array(image)>135
 edges = {}
 def add(a,b): edges.setdefault(a,[]).append(b)
@@ -26,7 +26,7 @@ def distance(p,a,b):
     if dx==dy==0: return math.hypot(p[0]-a[0],p[1]-a[1])
     t=max(0,min(1,((p[0]-a[0])*dx+(p[1]-a[1])*dy)/(dx*dx+dy*dy)))
     return math.hypot(p[0]-a[0]-t*dx,p[1]-a[1]-t*dy)
-def rdp(points,eps=.7):
+def rdp(points,eps=1.5):
     if len(points)<3: return points
     distances=[distance(p,points[0],points[-1]) for p in points[1:-1]]
     k=1+int(np.argmax(distances))

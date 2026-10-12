@@ -1,6 +1,6 @@
 export {
-  Scene, WebGLRenderer, PerspectiveCamera, CanvasTexture, PMREMGenerator,
+  Scene, WebGLRenderer, PerspectiveCamera, DataTexture, FloatType, RGBAFormat, PMREMGenerator,
   EquirectangularReflectionMapping, SRGBColorSpace, ACESFilmicToneMapping,
-  PointLight, DirectionalLight
+  PointLight, DirectionalLight, Quaternion, Vector3, Euler, Box3
 } from 'three';
 export {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
